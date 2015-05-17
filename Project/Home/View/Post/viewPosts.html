@@ -1,0 +1,619 @@
+<style>
+
+img {
+    vertical-align: middle;
+}
+
+.img-responsive {
+    display: block;
+    max-height: 250px;
+    max-width: 100%;
+	cursor: pointer;
+}
+
+.img-rounded {
+    border-radius: 3px;
+}
+
+.img-thumbnail {
+    background-color: #fff;
+    border: 1px solid #ededf0;
+    border-radius: 3px;
+    display: inline-block;
+    height: auto;
+    line-height: 1.428571429;
+    max-width: 100%;
+    moz-transition: all .2s ease-in-out;
+    o-transition: all .2s ease-in-out;
+    padding: 2px;
+    transition: all .2s ease-in-out;
+    webkit-transition: all .2s ease-in-out;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.timeline-centered {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-centered:before, .timeline-centered:after {
+    content: " ";
+    display: table;
+}
+
+.timeline-centered:after {
+    clear: both;
+}
+
+.timeline-centered:before, .timeline-centered:after {
+    content: " ";
+    display: table;
+}
+
+.timeline-centered:after {
+    clear: both;
+}
+
+.timeline-centered:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 4px;
+    background: #dddddd;
+    top: 20px;
+    bottom: 20px;
+    margin-left: 33px;
+}
+
+.timeline-centered .timeline-entry {
+    position: relative;
+    /*width: 50%;
+    float: right;*/
+    margin-top: 5px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.timeline-centered .timeline-entry:before, .timeline-centered .timeline-entry:after {
+    content: " ";
+    display: table;
+}
+
+.timeline-centered .timeline-entry:after {
+    clear: both;
+}
+
+.timeline-centered .timeline-entry:before, .timeline-centered .timeline-entry:after {
+    content: " ";
+    display: table;
+}
+
+.timeline-centered .timeline-entry:after {
+    clear: both;
+}
+
+.timeline-centered .timeline-entry.begin {
+    margin-bottom: 0;
+}
+
+.timeline-centered .timeline-entry.left-aligned {
+    float: left;
+}
+
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner {
+    margin-left: 0;
+    margin-right: -18px;
+}
+
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-time {
+    left: auto;
+    right: -100px;
+    text-align: left;
+}
+
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-icon {
+    float: right;
+}
+
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label {
+    margin-left: 0;
+    margin-right: 70px;
+}
+
+.timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label:after {
+    left: auto;
+    right: 0;
+    margin-left: 0;
+    margin-right: -9px;
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner {
+    position: relative;
+    margin-left: -20px;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner:before, .timeline-centered .timeline-entry .timeline-entry-inner:after {
+    content: " ";
+    display: table;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner:after {
+    clear: both;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner:before, .timeline-centered .timeline-entry .timeline-entry-inner:after {
+    content: " ";
+    display: table;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner:after {
+    clear: both;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time {
+    position: absolute;
+    left: -100px;
+    text-align: right;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span {
+    display: block;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:first-child {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:last-child {
+    font-size: 12px;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
+    background: #fff;
+	padding:1px;
+    color: #737881;
+    display: block;
+    width: 50px;
+    height: 50px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    text-align: center;
+    -moz-box-shadow: 0 0 0 5px #dddddd;
+    -webkit-box-shadow: 0 0 0 5px #dddddd;
+    box-shadow: 0 0 0 5px #dddddd;
+    line-height: 40px;
+    font-size: 15px;
+    float: left;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-primary {
+    background-color: #303641;
+    color: #fff;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-secondary {
+    background-color: #ee4749;
+    color: #fff;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-success {
+    background-color: white;
+    color: #fff;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-info {
+    background-color: #21a9e1;
+    color: #fff;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-warning {
+    background-color: #fad839;
+    color: #fff;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-danger {
+    background-color: #cc2424;
+    color: #fff;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
+    position: relative;
+    background: #dddddd;
+    padding: 1em;
+    margin-left: 75px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 6px;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 9px 9px 0;
+    border-color: transparent #dddddd transparent transparent;
+    left: 0;
+    top: 10px;
+    margin-left: -9px;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2, .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p {
+    color: #707070;
+    font-size: 17px;
+	text-shadow: 1px 1px 1px #B3B3B3;
+    margin: 0;
+    line-height: 1.428571429;
+	margin-bottom:5px;
+    word-break: break-word;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p + p {
+    margin-top: 16px;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a {
+    color: #303641;
+}
+
+.timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 span {
+    -webkit-opacity: .6;
+    -moz-opacity: .6;
+    opacity: .6;
+    -ms-filter: alpha(opacity=60);
+    filter: alpha(opacity=60);
+	float:right;
+	font-size:12px;
+}
+.wrap{
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #d4d4d4;
+    -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.175);
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.175);
+}
+.post-btn{
+	padding-top: 6px!important;
+	font-weight: bold;
+	color: #248dc1!important;
+	color: #fff!important;
+	background-color: #248dc1!important;
+}
+.post-btn:hover{
+	cursor:pointer;
+	background-color: #0074AD!important;
+}
+.post-btn:active{
+	cursor:pointer;
+	padding-top: 6px!important;
+	font-weight: bold;
+	color: #fff!important;
+	background-color: #d9534f!important;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+	cursor: pointer;
+}
+.btn-file>i:hover{
+	color:#3B5999;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+	cursor:pointer;
+    background: white;
+    display: block;
+}
+textarea:focus{
+	border: 1px solid #94BCDC!important;
+	box-shadow: 0px 0px 10px #94bcdc!important;
+	margin-left: 4px!important;
+	margin-top:3px!important;
+	width:99%!important;
+}
+textarea{
+	margin-left: 6px!important;
+	margin-top:3px!important;
+	width:98%!important;
+}
+.modal-body{
+    padding-left: 2px;
+    padding-right: 4px;
+}
+.progress{
+	margin:2px;
+}
+
+#lightbox .modal-content {
+    display: inline-block;
+    text-align: center;   
+}
+
+@media(max-width:767px){
+	.img-responsive {
+	    max-height: 150px;
+	}
+}
+</style>
+<div class="postlist">
+    <legend><span class="glyphicon glyphicon-bookmark" style="top: 4px;color: #d9534f"></span> <strong>{$subject}</strong></legend>
+    <div class="row wrap">
+        <div class="row">
+            <div class="col-md-8 col-sm-8 col-lg-8 col-xs-12" style="padding-left: 2px;">
+                <span style="font-size: 400 ; line-height: 30px;color: #248dc1">
+                        <i class="glyphicon glyphicon-user" style="top: 4px;"></i> <span><span class="badge" style="background-color: #d9534f;color: #ffffff">{$members_num}</span></span>
+                        <i class="glyphicon glyphicon-comment" style="top: 4px;margin-left: 5px;"></i> <span class="badge" style="background-color: #d9534f;color: #ffffff">{$replies}</span>
+                        <i class="glyphicon glyphicon-eye-open" style="top: 4px;margin-left: 5px;"></i> <span class="badge" style="background-color: #d9534f;color: #ffffff">{$views}</span>
+                </span>
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4 hidden-xs text-right" style="padding-top: 5px;">
+                <button type="button" class="btn btn-info btn-xs" >
+                    <span class="glyphicon glyphicon-info-sign" style="top: 2px;"></span> <span onclick="loadPageActivityInfo({$aid});">活动介绍</span>
+                </button>
+            </div>
+            <div class="col-xs-12 visible-xs" style="padding-left: 2px;">
+                <button type="button" class="btn btn-info btn-xs">
+                    <span class="glyphicon glyphicon-info-sign" style="top: 2px;"></span> <span onclick="loadPageActivityInfo({$aid});">活动介绍</span>
+                </button>
+            </div>
+        </div>
+        <hr style="margin-top: 5px;" />
+
+        <div class="timeline-centered">
+       		<switch name="haspost">
+       		<case value="true">
+       		<article class="timeline-entry">
+                <div class="timeline-entry-inner">
+                    <div class="timeline-icon post-btn" data-toggle="modal" data-target="#postModal">
+                        <i class="entypo-flight">POST</i>
+                    </div>
+                    <div style="width: 100%;height: 100px;">
+                    </div>
+                </div>
+            </article>
+       		</case>
+       		</switch>
+            
+            <volist name="posts" id="post">
+	            <article class="timeline-entry">
+	                <div class="timeline-entry-inner">
+	                    <div class="timeline-icon bg-success">
+	                        <i class="entypo-feather" onclick="loadPageProfile({$post.uid});" style="cursor: pointer;"><img class="img-circle" style="width:100%;height:100%" src="__UPLOAD__/avatar/thumbmini_{$post.avatar}"/></i>
+	                    </div>
+	                    <div class="timeline-label">
+	                        <h2><a href="#" onclick="loadPageProfile({$post.uid});">{$post.username}</a> <span>{$post.friendly_date}</span></h2>
+	                        <p>{$post.content}</p>
+	                        <switch name="post.hasimg">
+    						<case value="1"><img src="__UPLOAD__/post/image/thumbsmall_{$post.img}" data-imgname="{$post.img}" class="img-responsive img-rounded full-width postimg" data-toggle="modal" data-target="#lightbox"></case>
+							</switch>
+	                    </div>
+	                </div>
+	            </article>
+            </volist>
+            
+            <article class="timeline-entry">
+                <div class="timeline-entry-inner">
+                    <div class="timeline-icon post-btn" data-toggle="modal" data-target="#postModal">
+                        <i class="entypo-flight">POST</i>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+<!--post modal-->
+<div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+<form id="postform" action="__HOME__/Post/addPost" enctype="multipart/form-data" method="post" >
+<input type="hidden" name="aid" id="aid" value="{$aid}" />
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                发表
+            </div>
+            <div class="modal-body">
+                
+                    <div class="form-group">
+                        <textarea class="form-control input-md" id="content" name="content" style="min-height:100px;" maxlength="140" placeholder="您想说点什么?(不多于140字)"></textarea>
+                    </div>
+            </div>
+            <div class="modal-footer">
+            	<div id="picdiv" class="text-left">
+					<img id="img" src=""/>
+				</div>
+				<div class="progress" style="display: none;">
+  			    	<div class="progress-bar progress-bar-striped active" role="progressbar" style="width: 100%"></div>
+                </div>
+                <div style="margin-top: 5px;">
+                    <button class="btn btn-primary btn-sm" type="submit" aria-hidden="true" id="post">Post</button>
+                    <ul class="pull-left list-inline">
+	                    <li>
+		                    <span class="btn-file">
+		                    <i class="glyphicon glyphicon-picture" id="postpicbtn"></i>
+		                    	<input class="hidden" type="file" name="pic" id="pic" onchange="handleFiles(this)" accept="image/*">
+		                    </span>
+	                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+<!-- lightbox -->
+<div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog  text-center" data-dismiss="modal">
+        <div class="modal-content">
+            <div class="modal-body">
+           		<img src="" name='' id="lightbox-img" class="lightbox-img"/>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(function(){
+	
+	/**查看大图**/
+	var $lightbox = $('#lightbox');
+    $('.postimg').on('click', function(event) {
+    	var imgname = $(this).data('imgname');
+        var $img = $(this), 
+            src = "__UPLOAD__/post/image/thumbmedium_"+imgname,
+            alt = $img.attr('alt'),
+            css = {
+                'maxWidth': $(window).width()-50,
+                'maxHeight': $(window).height() - 200,
+                'cursor':'pointer',
+                'padding':'5px'
+            };
+        $lightbox.find('.close').addClass('hidden');
+        $lightbox.find('img').attr('src', src);
+        $lightbox.find('img').attr('alt', alt);
+        $lightbox.find('img').attr('name', imgname);
+        $lightbox.find('img').css(css);
+    });
+    
+    /**查看原图**/
+    $(".lightbox-img").on('click',function(e){
+    	e.preventDefault();
+    	var name = $(this).attr('name');
+    	var src = "__UPLOAD__/post/image/"+name;
+    	window.open(src,"_blank");
+    });
+    
+	$("#postModal").on('hidden.bs.modal', function () {
+		$("#content").val('');
+		var control = $("#pic");
+		control.replaceWith( control = control.clone( true ) );
+		var img = '<img id="img" src=""/>';
+		$("#img").replaceWith(img);
+	});
+	
+	$("#postform").submit(function(event) {
+		event.preventDefault();
+		var formData = new FormData($(this)[0]);
+	    var url = $(this).attr('action'); 
+	    var aid = $("#aid").val();
+	    $.ajax({
+	        url: url,
+	        type: 'POST',
+	        data: formData,
+	        async: true,
+	        cache: false,
+	        contentType: false,
+	        processData: false,
+	        beforeSend:function(){
+	        	$('.progress').show();
+	        },
+	        complete:function(){
+	       		$('.progress').hide();
+	        },
+	        success: function (data) {
+	        	if(data.code>0){
+					swal({
+						title:"成功",
+						text :"发表成功",
+						type :"success",
+						confirmButtonColor:"#3B5999",
+						confirmButtonText: "OK"
+					},function(){
+						$('#postModal').modal('hide')
+						loadPageViewPosts(aid);
+					});
+				}else if(data.code<0){
+					swal({
+						title:"失败",
+						text :data.error,
+						type :"error",
+						confirmButtonColor:"#3B5999",
+						confirmButtonText: "OK",
+						allowOutsideClick:true
+				    });
+				}
+	        }
+	      });
+	    return false; 
+	});
+	
+	$("#postpicbtn").on("click",function(e){
+		$("#pic").click();
+	});
+});
+
+window.URL = window.URL || window.webkitURL;
+function handleFiles(obj) {
+	var fileElem = document.getElementById("pic"),
+    fileList = document.getElementById("picdiv");
+      oldImg = document.getElementById("imglink") ? document.getElementById("imglink") : document.getElementById("img");
+	var files = obj.files,
+		img = new Image();
+	if(window.URL){
+		//File API
+	      img.src = window.URL.createObjectURL(files[0]); //创建一个object URL，并不是本地路径
+	      img.width = 120;
+	      img.height = 90;
+	      img.id = 'img';
+	      img.onload = function(e) {
+	         window.URL.revokeObjectURL(this.src); //图片加载后，释放object URL
+	      }
+	      fileList.replaceChild(img,oldImg);
+	}else if(window.FileReader){
+		//opera不支持createObjectURL/revokeObjectURL方法。用FileReader对象来处理
+		var reader = new FileReader();
+		reader.readAsDataURL(files[0]);
+		reader.onload = function(e){
+			img.src = this.result;
+			img.width = 120;
+			img.height = 90;
+			fileList.replaceChild(img,oldImg);
+		}
+	}else{
+		//ie
+		obj.select();
+		var nfile = document.selection.createRange().text;
+		document.selection.empty();
+		fileList.innerHTML="";
+	    fileList.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(enanble = 'true',sizingMethod='scale',src='"+nfile+"')";
+	}
+}
+</script>
