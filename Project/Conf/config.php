@@ -11,9 +11,9 @@ return array(
 
 		'DB_PWD'    => '', // 密码 tae
 
-		'DB_PORT'   => 3306, // 端口
+		'DB_PORT'   => , // 端口
 
-		'DB_PREFIX' => 'app_', // 数据库表前缀
+		'DB_PREFIX' => '', // 数据库表前缀
 
 		'DB_CHARSET'=> 'utf8', // 字符集
 		
