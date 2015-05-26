@@ -35,7 +35,7 @@
 【活动管理】  
 ![活动管理](https://github.com/FelixHo/SCAP/blob/master/screenshot/个人活动管理.png)  
 
-【响应布局】
-![response1](https://github.com/FelixHo/SCAP/blob/master/screenshot/响应式1.png)  
-![response2](https://github.com/FelixHo/SCAP/blob/master/screenshot/响应式2.png)  
-![response3](https://github.com/FelixHo/SCAP/blob/master/screenshot/响应式3.png)
+【响应布局】  
+<img src="https://github.com/FelixHo/SCAP/blob/master/screenshot/响应式1.png" width="474px" height="784px">  
+<img src="https://github.com/FelixHo/SCAP/blob/master/screenshot/响应式2.png" width="474px" height="784px">  
+<img src="https://github.com/FelixHo/SCAP/blob/master/screenshot/响应式3.png" width="474px" height="784px">  
