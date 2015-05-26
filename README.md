@@ -1,5 +1,8 @@
 # SCAP
 ###基于Bootstrap 3.0（Response）+ThinkPHP3.2的活动分享平台
+######开发周期:7d 版本阶段:Alpha  
+  
+###Preview
 
 【用户登录】  
 ![登录页](https://github.com/FelixHo/SCAP/blob/master/screenshot/登陆页.png)
