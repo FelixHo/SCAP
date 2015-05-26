@@ -1,8 +1,8 @@
 # SCAP
-##基于Bootstrap 3.0（Response）+ThinkPHP3.2的活动分享平台
+###基于Bootstrap 3.0（Response）+ThinkPHP3.2的活动分享平台
 
 【用户登录】
-
+![登录页](https://github.com/FelixHo/SCAP/blob/master/screenshot/登陆页.png)
 
 【发起活动】
 
