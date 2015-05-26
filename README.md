@@ -1,5 +1,5 @@
 # SCAP
-基于Bootstrap 3.0（Response）+ThinkPHP3.2的活动分享平台
+##基于Bootstrap 3.0（Response）+ThinkPHP3.2的活动分享平台
 
 【用户登录】
 
